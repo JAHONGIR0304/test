@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-weight: 400;
+  }
+  
+  body {
+    background: red;
+  }
+  
+  .container {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(50, 50, 50);
+    height: 90px;
+    width: 100%;
+  }
+  
+  .ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px; 
+    & a {
+      color: white;
+    }
+  
+    
+    .router-link-active {
+      color: green;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -10px;
+        left: 0;
+        background: white;
+      }
+    }
+  }
+  
+  .products{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+    gap: 50px;
+  }
+  
+  .product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  flex-direction: column;
+  padding: 60px 0;
+  gap: 30px;
+  background: darkgreen;
+  
+  
+    & img {
+      width: 300px;
+      height: 250px;
+    }
+    & p {
+        font-weight: 700;
+        font-size: 25px;
+        max-width: 300px;
+        text-align: center;
+    }
+  }
+  .hom{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .abu{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px ; 
+  
+    & button {
+      outline: none;
+      border: none;
+      background: red;
+      font-weight: 700;
+      font-size: 25px;
+      color: black;
+      padding: 20px;
+    }
+  }
+  
+  .openedCard{
+    height: 100%;
+    cursor: pointer;
+    background: green;
+  }
+  
+  .sorters {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    & > button {
+      outline: none;
+      border: none;
+      background: white;
+      font-weight: 500;
+      font-size: 30px;
+      color: black;
+      padding: 20px;
+      &.activeSort{
+  
+    background: white;
+    font-weight: 500;
+      font-size: 30px;
+      color: black;
+      padding: 20px;
+      outline: none;
+      border: none;
+  }
+    }
+  }
+  
